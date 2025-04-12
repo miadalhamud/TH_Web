@@ -10,7 +10,6 @@ use App\Models\Payment;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -18,7 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        
         Patient::factory()->count(5)->create();
         Doctor::factory()->count(3)->create();
 

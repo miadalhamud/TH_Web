@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\SpecialtyController;
 use App\Http\Controllers\PatientController;
 
+
 Route::get('/', [SpecialtyController::class, 'index']);
 
 Route::get('/specialty/{id}', [SpecialtyController::class, 'show']);
@@ -46,6 +47,7 @@ Route::get('/doctors', function () {
     return view('doctors.index', compact('doctors'));
 });
 
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -53,5 +55,4 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-
 

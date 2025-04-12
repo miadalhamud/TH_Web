@@ -12,21 +12,22 @@
     <div class="flex justify-between items-center p-4">
       <div class="flex space-x-4">
         <x-nav-link path="/" :active="request()->is('/')">Home</x-nav-link>
-        <x-nav-link path="/about" :active="request()->is('about')" >About</x-nav-link>
+        <x-nav-link path="/about" :active="request()->is('about')">About</x-nav-link>
         <x-nav-link path="/contact" :active="request()->is('contact')">Contact</x-nav-link>
       </div>
       <div class="flex space-x-2">
          <a href="/new_patient"> 
-           <button class="bg-blue-500 text-white text-sm px-2 py-1 rounded-md" > New Patient</button>
+           <button class="bg-blue-500 text-white text-sm px-2 py-1 rounded-md">New Patient</button>
          </a>
          <a href="/new_doctor">
-           <button class="bg-blue-500 text-white text-sm px-2 py-1 rounded-md" > New Doctor</button>
+           <button class="bg-blue-500 text-white text-sm px-2 py-1 rounded-md">New Doctor</button>
          </a>
-       </div>
+      </div>
     </div>
-    <div>
+
+    <main>
         {{ $slot }}
-    </div>
+    </main>
 </body>
 
 </html>

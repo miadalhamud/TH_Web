@@ -17,3 +17,4 @@ class SpecialtyController extends Controller
         return view('specialty' , ['specialty' => $specialty]);
      }
 }
+
