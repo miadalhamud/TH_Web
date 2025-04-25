@@ -3,17 +3,26 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\SpecialtyController;
-use App\Http\Controllers\PatientController;
-
+use App\Http\Controllers\patientController;
+use App\Http\Controllers\AppointmentController;
 
 Route::get('/', [SpecialtyController::class, 'index']);
 
 Route::get('/specialty/{id}', [SpecialtyController::class, 'show']);
 
+Route::get('/patients/{id}', [patientController::class, 'show'])->whereNumber('id');
+
+Route::get('/appointments/create', [AppointmentController::class, 'create']);
+
+Route::post('/appointments/create', [AppointmentController::class, 'store']);
+
+Route::get('/appointments/index', [AppointmentController::class, 'index'])->name('appointments.index');
+
 
 Route::get('/new_patient', function () {
-    return view('new_patient');
+    return view('patients.new_patient');
 });
+
 Route::get('/patients', function () {
     $patients = DB::table('patients')->get();
     return view('patients.index', compact('patients'));

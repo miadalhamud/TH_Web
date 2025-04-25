@@ -22,6 +22,9 @@
          <a href="/new_doctor">
            <button class="bg-blue-500 text-white text-sm px-2 py-1 rounded-md">New Doctor</button>
          </a>
+         <a href="{{ route('appointments.index') }}">
+  <button class="bg-blue-500 text-white text-sm px-2 py-1 rounded-md">Appointments</button>
+</a>
       </div>
     </div>
 
